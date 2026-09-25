@@ -1,0 +1,43 @@
+{
+  "name": "sb-kyosk",
+  "version": "0.1.0",
+  "description": "Totem de autoatendimento editável e offline (genérico) — runtime + editor",
+  "author": "GrupoSB",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "./out/main/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "dev:web": "vite --config vite.web.config.ts",
+    "compile": "electron-vite build",
+    "build": "electron-vite build && electron-builder --win",
+    "dist": "electron-vite build && electron-builder --win",
+    "preview": "electron-vite preview",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  },
+  "build": {
+    "appId": "br.com.gruposb.sbkyosk",
+    "productName": "SB Kyosk",
+    "directories": { "output": "release" },
+    "files": ["out/**/*", "package.json"],
+    "extraFiles": [
+      { "from": "config", "to": "config" },
+      { "from": "midia", "to": "midia" },
+      { "from": "assets", "to": "assets" }
+    ],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}

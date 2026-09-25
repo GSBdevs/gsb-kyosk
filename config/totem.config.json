@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "estabelecimento": {
+    "nome": "Estabelecimento Exemplo",
+    "logo": "./assets/logo-placeholder.svg",
+    "idiomas": ["pt-BR", "en", "es"],
+    "tema": {
+      "corPrimaria": "#1f4e8c",
+      "corCard": "rgba(31, 78, 140, 0.72)",
+      "corTextoCard": "#ffffff",
+      "corFundo": "#0b1b33",
+      "corAcento": "#6fb0ff",
+      "raio": "18px",
+      "fundoImagem": "./assets/fundo-placeholder.svg",
+      "fundoVideo": ""
+    }
+  },
+  "layout": {
+    "orientacao": "retrato",
+    "grid": { "modo": "auto", "cols": 3, "rows": 2, "gap": 22 },
+    "cards": [
+      {
+        "id": "card-info",
+        "titulo": { "pt-BR": "Informações", "en": "Information", "es": "Información" },
+        "icone": "info",
+        "acao": { "tipo": "tela", "destino": "tela-info" },
+        "abertura": "modal",
+        "ativo": true
+      },
+      {
+        "id": "card-horarios",
+        "titulo": { "pt-BR": "Horários", "en": "Hours", "es": "Horarios" },
+        "icone": "clock",
+        "acao": { "tipo": "tela", "destino": "tela-horarios" },
+        "abertura": "modal",
+        "ativo": true
+      },
+      {
+        "id": "card-servicos",
+        "titulo": { "pt-BR": "Serviços", "en": "Services", "es": "Servicios" },
+        "icone": "grid",
+        "acao": { "tipo": "tela", "destino": "tela-servicos" },
+        "abertura": "pagina",
+        "ativo": true
+      },
+      {
+        "id": "card-contato",
+        "titulo": { "pt-BR": "Contato", "en": "Contact", "es": "Contacto" },
+        "icone": "phone",
+        "acao": { "tipo": "tela", "destino": "tela-contato" },
+        "abertura": "modal",
+        "ativo": true
+      },
+      {
+        "id": "card-local",
+        "titulo": { "pt-BR": "Localização", "en": "Location", "es": "Ubicación" },
+        "icone": "globe",
+        "acao": { "tipo": "tela", "destino": "tela-local" },
+        "abertura": "pagina",
+        "ativo": true
+      },
+      {
+        "id": "card-link",
+        "titulo": { "pt-BR": "Site", "en": "Website", "es": "Sitio" },
+        "icone": "globe",
+        "acao": { "tipo": "url", "destino": "https://example.com" },
+        "abertura": "modal",
+        "ativo": true
+      }
+    ]
+  },
+  "telas": [
+    {
+      "id": "tela-info",
+      "titulo": { "pt-BR": "Informações", "en": "Information", "es": "Información" },
+      "tipo": "texto",
+      "conteudo": { "texto": "Bem-vindo. Configure este conteúdo no editor." }
+    },
+    {
+      "id": "tela-horarios",
+      "titulo": { "pt-BR": "Horários", "en": "Hours", "es": "Horarios" },
+      "tipo": "horarios",
+      "conteudo": { "itens": [] }
+    },
+    {
+      "id": "tela-servicos",
+      "titulo": { "pt-BR": "Serviços", "en": "Services", "es": "Servicios" },
+      "tipo": "lista",
+      "conteudo": { "itens": [] }
+    },
+    {
+      "id": "tela-contato",
+      "titulo": { "pt-BR": "Contato", "en": "Contact", "es": "Contacto" },
+      "tipo": "contato",
+      "conteudo": { "telefone": "", "email": "", "endereco": "" }
+    },
+    {
+      "id": "tela-local",
+      "titulo": { "pt-BR": "Localização", "en": "Location", "es": "Ubicación" },
+      "tipo": "texto",
+      "conteudo": { "texto": "Endereço e mapa aqui." }
+    }
+  ],
+  "publicidade": {
+    "proporcao": "16:9",
+    "ajuste": "contain",
+    "alturaVh": 24,
+    "intervaloSegundos": 8,
+    "itens": [
+      { "id": "ad-0", "tipo": "image", "arquivo": "./midia/publicidade/00_banner_correto.svg", "ordem": 0, "ativo": true },
+      { "id": "ad-1", "tipo": "image", "arquivo": "./midia/publicidade/01_exemplo.svg", "ordem": 1, "ativo": true },
+      { "id": "ad-2", "tipo": "image", "arquivo": "./midia/publicidade/02_exemplo.svg", "ordem": 2, "ativo": true },
+      { "id": "ad-3", "tipo": "image", "arquivo": "./midia/publicidade/03_exemplo.svg", "ordem": 3, "ativo": true }
+    ]
+  }
+}
